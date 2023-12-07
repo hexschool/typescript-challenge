@@ -14,4 +14,7 @@ npm install
 npm run dev
 // 執行測試檔
 npm run test
+
+紀錄:
+單元測試中的 toThrow('錯誤內容') 檢測需要用 throw new Error('錯誤內容') 方式
 ```
