@@ -7,13 +7,23 @@
  * 新增待辦事項
  * @param todos - 現有的待辦事項陣列
  * @param task - 新的待辦事項的內容
- * 
+ *
  * 範例:
  * 輸入: ([{ id: 1, task: 'Buy milk', completed: false }], 'Walk the dog')
  * 輸出: [{ id: 1, task: 'Buy milk', completed: false }, { id: 2, task: 'Walk the dog', completed: false }]
  */
+interface Todo {
+  id: number;
+  task: string;
+  completed: boolean;
+}
 
 export function addTodo(todos: Todo[], task: string): Todo[] {
-    // 在此實現函式
-    return [...todos, newTodo];
+  // 在此實現函式
+  const newTodo = {
+    id: todos.length + 1,
+    task,
+    completed: false,
+  };
+  return [...todos, newTodo];
 }
