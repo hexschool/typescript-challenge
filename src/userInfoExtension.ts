@@ -17,10 +17,12 @@ interface AddressInfo {
  * age: number;
  * street: string;
  * city: string;
+ * 
+ * 使用 TypeScript 的交叉類型（Intersection Types）來合併兩個介面
  */
 
 // 請在此處寫下你的程式碼
-
+type FullUserInfo = BasicUserInfo & AddressInfo;
 
 /**
  * 任務：實作一個函式 `createFullUserInfo`，將使用者的基本資訊和地址資訊合併成一個物件。
@@ -34,4 +36,5 @@ interface AddressInfo {
  */
 export function createFullUserInfo(user: FullUserInfo): FullUserInfo {
     // 請在此處寫下你的程式碼
+    return user;
 }

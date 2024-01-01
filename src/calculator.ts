@@ -5,6 +5,7 @@
  */
 export function add(a: number, b: number): number {
     // 在此實現函式
+    return a + b;
 }
 
 /**
@@ -14,6 +15,7 @@ export function add(a: number, b: number): number {
  */
 export function subtract(a: number, b: number): number {
     // 在此實現函式
+    return a - b;
 }
 
 /**
@@ -23,6 +25,7 @@ export function subtract(a: number, b: number): number {
  */
 export function multiply(a: number, b: number): number {
     // 在此實現函式
+    return a * b;
 }
 
 /**
@@ -30,9 +33,19 @@ export function multiply(a: number, b: number): number {
  * @param a - 第一個數字
  * @param b - 第二個數字
  */
-export function divide(a: number, b: number): number {
+export function divide(a: number, b: number): number | string {
     // 在此實現函式
+    if (a === 0 || b === 0) {
+        throw new Error("Cannot divide by zero");
+    } else {
+        const result = a / b;
+        if (result === 0) {
+            throw new Error("Cannot divide by zero");
+        }
+        return result;
+    }
 }
+
 
 /**
  * 實現加法函數，結果不能超過 100。

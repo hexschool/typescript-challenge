@@ -10,4 +10,7 @@
 
 export function sortNumbers(numbers: number[]): number[] {
   // 在此實現函式
+  return numbers.sort(function (a, b) {
+    return a - b;
+  });
 }

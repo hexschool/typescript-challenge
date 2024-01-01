@@ -9,13 +9,12 @@
  * @param property - 要過濾的屬性名稱
  * @param value - 要過濾的屬性值
  * @returns - 回傳過濾後的陣列
+ * 
+ * 使用範例：
+ * const filteredArray = filterByProperty(array, 'age', 20);
  */
-export function filterByProperty(){
-    // 請在此處寫下你的程式碼
-}
-
-
 // 寫法推薦
-// export function filterByProperty<T, K extends keyof T>(array: T[], property: K, value: T[K]): T[] {
-    
-// }
+export function filterByProperty<T, K extends keyof T>(array: T[], property: K, value: T[K]): T[] {
+    // 請在此處寫下你的程式碼
+    return array.filter(item => item[property] === value);
+}
