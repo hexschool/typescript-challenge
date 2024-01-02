@@ -10,4 +10,5 @@
  */
 export function filterEvens(numbers: number[]): number[] {
     // 請在此處寫下你的程式碼
+    return numbers.filter((number) => number % 2 === 0);
 }
