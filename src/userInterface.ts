@@ -3,6 +3,11 @@
  * 用戶介面應該包含 firstName 和 lastName 兩個屬性，都是字串型別。
  */
 
+interface UserInfo {
+    firstName: string;
+    lastName: string;
+}
+
 /**
  * 獲取用戶的全名
  * @param user - 用戶物件，應該包含 firstName 和 lastName 兩個屬性
@@ -11,6 +16,7 @@
  * 輸入: { firstName: 'John', lastName: 'Doe' }
  * 輸出: 'John Doe'
  */
-export function getFullName(user: /* 你的用戶介面 */): string {
+export function getFullName(user: UserInfo /* 你的用戶介面 */): string {
     // 在此實現函式
+    return `${user.firstName} ${user.lastName}`;
 }
