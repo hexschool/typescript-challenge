@@ -22,7 +22,15 @@ export function createDataStore<T>() {
     // 定義一個名為 getAll 的函式，該函式回傳 data 陣列的所有元素
     // 回傳的陣列中的元素型別也是 T，所以可以是任何型別
     //function getAll()
-    
-    
+    const data: T[] = [];
+
+    function add(item: T) {
+        data.push(item);
+    }
+
+    function getAll() {
+        return data;
+    }
+
     return { add, getAll };
 }
