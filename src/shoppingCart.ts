@@ -15,6 +15,7 @@ export function createShoppingCart() {
     function addItem(item: Product) {
         items.push(item);
     }
+
     /**
      * getTotalPrice 方法：計算購物車中所有商品的總價
      * @returns - 回傳購物車中所有商品的總價
@@ -22,6 +23,11 @@ export function createShoppingCart() {
      */
     function getTotalPrice() {
         // 請在此處寫下你的程式碼
+        let totalPrice = 0;
+        for (const item of items) {
+            totalPrice += item.price;
+        }
+        return totalPrice;
     }
 
     function getItemCount() {
