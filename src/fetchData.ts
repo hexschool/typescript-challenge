@@ -6,4 +6,10 @@
  */
 
 // 請在下方寫下你的程式碼
-
+export function fetchData(url: string) {
+    return new Promise(async (resolve, reject) => {       
+        const response = await fetch(url)
+        const data = await response.json()
+        resolve(data)
+    })
+}

@@ -10,8 +10,13 @@
  * @param value - 要過濾的屬性值
  * @returns - 回傳過濾後的陣列
  */
-export function filterByProperty(){
+export interface Item {
+    name: string,
+    age: number,
+}
+export function filterByProperty<Item, K extends keyof Item>(array:Item[], property:K, value: Item[K]){
     // 請在此處寫下你的程式碼
+    return array.filter(arr => arr[property] === value)
 }
 
 
