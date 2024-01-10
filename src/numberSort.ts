@@ -9,5 +9,6 @@
  */
 
 export function sortNumbers(numbers: number[]): number[] {
-  // 在此實現函式
+  const newArray = numbers.sort((a, b) => a - b);
+  return newArray
 }
