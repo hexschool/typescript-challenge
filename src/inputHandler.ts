@@ -10,7 +10,15 @@
  * 輸入: 123
  * 輸出: 'Input is a number: 123'
  */
+type InputType = string | number;
 
-export function handleInput(input) {
+export function handleInput(input:InputType):string {
     // 在此實現函式
+    let st:string=''
+    if(typeof input=='string') {st= `Input is a string: ${input}`}
+    if(typeof input=='number') {st= `Input is a number: ${input}`}
+
+
+    return st
+    // return 'Input is neither a string nor a number';
 }
