@@ -10,6 +10,7 @@
  * 輸入: 123
  * 輸出: 'Input is a number: 123'
  */
+// action test
 type InputType = string | number;
 
 export function handleInput(input:InputType):string {
