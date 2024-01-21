@@ -6,5 +6,5 @@
  * 首先，使用 split 方法將字串轉換為字元陣列。然後，使用 reverse 方法將陣列反轉。最後，使用 join 方法將反轉後的陣列轉換回字串。
  */
 export function reverseString(str: string): string {
-    // 在此實現函式
+    return str.split('').reverse().join('');
 }
