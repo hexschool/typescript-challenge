@@ -5,6 +5,7 @@
  */
 export function add(a: number, b: number): number {
     // 在此實現函式
+    return a + b
 }
 
 /**
@@ -14,6 +15,7 @@ export function add(a: number, b: number): number {
  */
 export function subtract(a: number, b: number): number {
     // 在此實現函式
+    return a - b
 }
 
 /**
@@ -23,8 +25,8 @@ export function subtract(a: number, b: number): number {
  */
 export function multiply(a: number, b: number): number {
     // 在此實現函式
+    return a * b
 }
-
 /**
  * 將兩個數字相除
  * @param a - 第一個數字
@@ -32,7 +34,12 @@ export function multiply(a: number, b: number): number {
  */
 export function divide(a: number, b: number): number {
     // 在此實現函式
+    if (b === 0) {
+        throw new Error('Cannot divide by zero');
+    }
+    return a / b;
 }
+
 
 /**
  * 實現加法函數，結果不能超過 100。
