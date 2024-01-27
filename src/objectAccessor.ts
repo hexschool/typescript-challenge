@@ -13,5 +13,10 @@
  * @returns - 回傳一個物件，該物件有 get 和 set 兩個方法
  */
 export function createObjectAccessor<T>(obj: T) {
-    // 請在此處寫下你的程式碼
+    return {
+        get: (key: keyof T) => obj[key],
+        set: (key: keyof T, value: any) => {
+            obj[key] = value;
+        }
+    };
 }
