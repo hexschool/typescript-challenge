@@ -13,5 +13,5 @@
  * 輸出: 0
  */
 export function arraySum(numbers: number[]): number {
-    // 在此實現函式
+    return numbers.reduce((acc, cur) => acc += cur, 0);
 }

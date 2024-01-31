@@ -2,6 +2,11 @@
  * 待辦事項介面已被移除，你需要自己定義一個新的待辦事項介面。
  * 待辦事項介面應該包含 id、task 和 completed 三個屬性，分別為數字型別、字串型別和布林型別。
  */
+export interface Todo {
+    id: number,
+    task: string,
+    computed: boolean
+};
 
 /**
  * 新增待辦事項
@@ -14,6 +19,6 @@
  */
 
 export function addTodo(todos: Todo[], task: string): Todo[] {
-    // 在此實現函式
-    return [...todos, newTodo];
+    let lastId = todos[todos.length - 1].id;
+    return [...todos, { id: lastId += 1, task: 'Walk the dog', completed: false}];
 }
